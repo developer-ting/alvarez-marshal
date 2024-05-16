@@ -1,44 +1,110 @@
 @import "variables"; //import this on each scss page you create
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 div,
 section {
-    display: block;
+  display: block;
 }
 
 .container-fluid {
-    width: 100%;
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
+  width: 100%;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .container {
-    @extend .container-fluid;
-    margin: auto;
+  @extend .container-fluid;
+  margin: auto;
 
-    @media(min-width:768px) and (max-width: 991px) {
-        width: 750px;
-    }
+  @media (min-width: 768px) and (max-width: 991px) {
+    width: 750px;
+  }
 
-    @media (min-width: 992px) and (max-width: 1199px) {
-        width: 970px;
-    }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    width: 970px;
+  }
 
-    @media (min-width: 1200px) {
-        width: 1170px;
-    }
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
 }
 
 .img-responsive {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #bcbcbc;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0285ca;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0285ca;
+}
+
+.section_title {
+  font-family: "helvetica_neue_lt_std57Cn";
+  font-size: 3.5rem;
+  line-height: 3.75rem;
+  color: #002749;
+  margin-bottom: 20px;
+  @media screen and (max-width: 767px) {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
+
+.para_section {
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  color: rgba(0, 39, 73, 0.8);
+  font-family: "Helvetica Neue LT Std 55 Roman";
+}
+
+.sub_title {
+  font-family: "helvetica_neue_lt_std65Md";
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #2eb8ff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.text_btn {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+  .text {
+    width: 55%;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  .btn {
+    margin-bottom: 20px;
+  }
 }
