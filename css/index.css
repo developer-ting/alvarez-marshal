@@ -132,12 +132,13 @@ section {
       .financial_services .number_box .box:hover {
         background-color: #002749; }
         .financial_services .number_box .box:hover .section_title {
-          color: #fff; }
+          color: #f9c20a; }
         .financial_services .number_box .box:hover .para_section {
           color: #fff; }
       .financial_services .number_box .box .section_title {
         font-weight: 600;
-        padding-bottom: 20px; }
+        padding-bottom: 20px;
+        font-family: "helvetica_neue_lt_std77BdCn"; }
 
 .industries_section {
   padding-bottom: 100px; }
