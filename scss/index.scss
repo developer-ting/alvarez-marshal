@@ -322,3 +322,65 @@
     }
   }
 }
+
+.faq_section {
+  padding-bottom: 100px;
+  .faq {
+    .faq_tab {
+      padding-top: 10px;
+      .accordion-item {
+        color: #111;
+        margin: 30px 0;
+        border-bottom: 1px solid #d0e5ec;
+      }
+      .accordion-item-header {
+        width: 80%;
+        padding: 0 0 30px 0;
+        line-height: 26px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        color: #002749;
+        font-family: "helvetica_neue_lt_std65Md";
+      }
+      .accordion-item-header::after {
+        content: "";
+        font-size: 2rem;
+        position: absolute;
+        right: 1rem;
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img//home/down_arrow.svg);
+      }
+      .accordion-item-header.active::after {
+        content: "";
+        font-size: 2rem;
+        position: absolute;
+        right: 1rem;
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img//home/up_arrow.svg);
+      }
+      .accordion-item-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+      .accordion-item-body-content {
+        width: 80%;
+        color: #002749;
+        font-size: 16px;
+        line-height: 25px;
+        padding-bottom: 30px;
+        font-family: "Helvetica Neue LT Std 55 Roman";
+        @media screen and (max-width: 767px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

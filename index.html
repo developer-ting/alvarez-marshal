@@ -1282,6 +1282,98 @@
         </div>
       </div>
     </section>
+    <section class="faq_section">
+      <div class="container">
+        <div class="faq">
+          <h6 class="sub_title">FAQ</h6>
+          <h2 class="section_title">How can We Help?</h2>
+          <div class="faq_tab">
+            <div class="accordion">
+              <div class="accordion-item">
+                <div class="accordion-item-header para_section active">
+                  What financial services do you offer?
+                </div>
+                <div class="accordion-item-body" style="max-height: none">
+                  <div class="accordion-item-body-content">
+                    We provide end-to-end portfolio and M&A services; deliver
+                    innovation, revenue growth and efficiency through business
+                    transformation; and execute rapid solutions to turn around
+                    businesses. Clients can expect bottom line results through
+                    action-oriented leadership and success-aligned fee
+                    arrangements, delivered by our global team of turnaround
+                    experts, industry operators, digital leaders and regulatory
+                    specialists.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-item-header para_section">
+                  What is your approach to confidentiality and data security?
+                </div>
+                <div class="accordion-item-body">
+                  <div class="accordion-item-body-content">
+                    We provide end-to-end portfolio and M&A services; deliver
+                    innovation, revenue growth and efficiency through business
+                    transformation; and execute rapid solutions to turn around
+                    businesses. Clients can expect bottom line results through
+                    action-oriented leadership and success-aligned fee
+                    arrangements, delivered by our global team of turnaround
+                    experts, industry operators, digital leaders and regulatory
+                    specialists.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-item-header para_section">
+                  What industries do you specialize in serving?
+                </div>
+                <div class="accordion-item-body">
+                  <div class="accordion-item-body-content">
+                    We provide end-to-end portfolio and M&A services; deliver
+                    innovation, revenue growth and efficiency through business
+                    transformation; and execute rapid solutions to turn around
+                    businesses. Clients can expect bottom line results through
+                    action-oriented leadership and success-aligned fee
+                    arrangements, delivered by our global team of turnaround
+                    experts, industry operators, digital leaders and regulatory
+                    specialists.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-item-header para_section">
+                  Do you offer customized solutions tailored to specific needs?
+                </div>
+                <div class="accordion-item-body">
+                  <div class="accordion-item-body-content">
+                    We provide end-to-end portfolio and M&A services; deliver
+                    innovation, revenue growth and efficiency through business
+                    transformation; and execute rapid solutions to turn around
+                    businesses. Clients can expect bottom line results through
+                    action-oriented leadership and success-aligned fee
+                    arrangements, delivered by our global team of turnaround
+                    experts, industry operators, digital leaders and regulatory
+                    specialists.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-item-header para_section">
+                  How can I contact you for further information or to schedule a
+                  consultation?
+                </div>
+                <div class="accordion-item-body">
+                  <div class="accordion-item-body-content">
+                    How can I contact you for further information or to schedule
+                    a consultation?
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <div class="am_footer">
       <div class="am_footer-primary">
@@ -1369,5 +1461,38 @@
       </div>
     </div>
     <script src="js/am.min.js"></script>
+    <script>
+      const accordionItemHeaders = document.querySelectorAll(
+        ".accordion-item-header"
+      );
+
+      accordionItemHeaders.forEach((accordionItemHeader, index) => {
+        accordionItemHeader.addEventListener("click", (event) => {
+          // Check if the clicked header is already active
+          const isActive = accordionItemHeader.classList.contains("active");
+
+          // Remove the active class from all headers and collapse all bodies
+          accordionItemHeaders.forEach((item) => {
+            item.classList.remove("active");
+            item.nextElementSibling.style.maxHeight = 0;
+          });
+
+          // If the clicked header was not active, activate it and expand the body
+          if (!isActive) {
+            accordionItemHeader.classList.add("active");
+            const accordionItemBody = accordionItemHeader.nextElementSibling;
+            accordionItemBody.style.maxHeight =
+              accordionItemBody.scrollHeight + "px";
+          }
+        });
+
+        // Open the first accordion item by default
+        if (index === 0) {
+          const accordionItemBody = accordionItemHeader.nextElementSibling;
+          accordionItemBody.style.maxHeight =
+            accordionItemBody.scrollHeight + "px";
+        }
+      });
+    </script>
   </body>
 </html>

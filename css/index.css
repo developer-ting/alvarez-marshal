@@ -333,4 +333,56 @@ section {
                 color: #8b8b8b;
                 font-family: "helvetica_neue_lt_std45_light"; }
 
+.faq_section {
+  padding-bottom: 100px; }
+  .faq_section .faq .faq_tab {
+    padding-top: 10px; }
+    .faq_section .faq .faq_tab .accordion-item {
+      color: #111;
+      margin: 30px 0;
+      border-bottom: 1px solid #d0e5ec; }
+    .faq_section .faq .faq_tab .accordion-item-header {
+      width: 80%;
+      padding: 0 0 30px 0;
+      line-height: 26px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: #002749;
+      font-family: "helvetica_neue_lt_std65Md"; }
+    .faq_section .faq .faq_tab .accordion-item-header::after {
+      content: "";
+      font-size: 2rem;
+      position: absolute;
+      right: 1rem;
+      width: 24px;
+      height: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url(../img//home/down_arrow.svg); }
+    .faq_section .faq .faq_tab .accordion-item-header.active::after {
+      content: "";
+      font-size: 2rem;
+      position: absolute;
+      right: 1rem;
+      width: 24px;
+      height: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url(../img//home/up_arrow.svg); }
+    .faq_section .faq .faq_tab .accordion-item-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out; }
+    .faq_section .faq .faq_tab .accordion-item-body-content {
+      width: 80%;
+      color: #002749;
+      font-size: 16px;
+      line-height: 25px;
+      padding-bottom: 30px;
+      font-family: "Helvetica Neue LT Std 55 Roman"; }
+      @media screen and (max-width: 767px) {
+        .faq_section .faq .faq_tab .accordion-item-body-content {
+          width: 100%; } }
+
 /*# sourceMappingURL=index.css.map */
